@@ -9,13 +9,13 @@ public class BorrowRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "record_id")
-    private int recordId;
+    private Long recordId;
 
     @Column(name = "book_id")
-    private String bookId;
+    private Long bookId;
 
     @Column(name = "user_id")
-    private String userId;
+    private Long userId;
 
     @Column(name = "borrow_date")
     private LocalDate borrowDate;
