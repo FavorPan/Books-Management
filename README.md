@@ -8,7 +8,7 @@ The Books-Management project is a book management system developed using Spring 
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/your-username/Books-Management.git
+1. Clone the repository: git clone https://github.com/FavorPan/Books-Management.git
 2. Navigate to the project directory: cd Books-Management
 3. Build the project: mvn clean install
 4. Run the application: java -jar target/books-management.jar
