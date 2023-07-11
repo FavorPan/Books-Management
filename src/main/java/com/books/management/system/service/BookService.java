@@ -10,4 +10,5 @@ public interface BookService {
     void save(Book book);
     void update(Book book);
     void delete(String bookId);
+    List<Book> searchBooks(String keyword);
 }

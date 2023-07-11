@@ -46,4 +46,11 @@ public class BookDAOImpl implements BookDAO {
         String sql = "DELETE FROM Book WHERE book_id = ?";
         jdbcTemplate.update(sql, bookId);
     }
+
+    @Override
+    public List<Book> searchBooks(String keyword) {
+        String sql = "SELECT * FROM Book WHERE title LIKE ? OR author LIKE ?";
+        String likeKeyword = "%" + keyword + "%";
+        return jdbcTemplate.query(sql, new BookRowMapper(), likeKeyword, likeKeyword);
+    }
 }

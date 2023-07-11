@@ -56,4 +56,8 @@ public class BookController {
             return ResponseEntity.notFound().build();
         }
     }
+    @GetMapping("/search/{keyword}")
+    public List<Book> searchBooks(@PathVariable String keyword) {
+        return bookService.searchBooks(keyword);
+    }
 }

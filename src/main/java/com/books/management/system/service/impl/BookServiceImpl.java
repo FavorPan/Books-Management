@@ -35,4 +35,6 @@ public class BookServiceImpl implements BookService {
     public void delete(String bookId) {
         bookDAO.delete(bookId);
     }
+    @Override
+    public  List<Book> searchBooks(String keyword) { return bookDAO.searchBooks(keyword); }
 }
