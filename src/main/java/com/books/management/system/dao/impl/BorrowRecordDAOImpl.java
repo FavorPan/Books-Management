@@ -45,6 +45,6 @@ public class BorrowRecordDAOImpl implements BorrowRecordDAO {
     @Override
     public List<BorrowRecord> getBorrowRecordsByUserId(String userId) {
         String sql = "SELECT * FROM BorrowRecord WHERE user_id = ?";
-        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(BorrowRecord.class));
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(BorrowRecord.class), userId);
     }
 }
