@@ -31,7 +31,7 @@ public class BorrowRecordController {
     public void updateBorrowRecord(@RequestBody BorrowRecord borrowRecord) {
         borrowRecordService.updateBorrowRecord(borrowRecord);
     }
-    @DeleteMapping("delete/{recordId}")
+    @DeleteMapping("/delete/{recordId}")
     public void deleteBorrowRecord(@PathVariable String recordId) {
         borrowRecordService.deleteBorrowRecord(recordId);
     }
